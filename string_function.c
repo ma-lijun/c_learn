@@ -34,11 +34,11 @@ int main(){
         printf("arr 中的第%d元素: %c， 其内存地址为：%p\n", i+1, s1[i], &s1[i]);
     }
 
-    // s1的值会变化
+    // s1的值会变化（s1指针开始位置不变）
     printf("strcat(s1,s2): %s\n", strcat(s1,s2));
     printf("s1: %s, s2: %s\n", s1, s2);
 
-    // s1 的值被s2覆盖
+    // s1 的值被s2覆盖（s1指针位开始置不变）
     printf("strcpy(s1,s2): %s\n", strcpy(s1,s2));
     printf("s1: %s, s2: %s\n", s1, s2);
 
