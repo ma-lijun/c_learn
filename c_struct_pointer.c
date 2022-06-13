@@ -10,7 +10,7 @@ struct Books
    int   book_id;
 };
 
-void print_book(struct Books book);
+void print_book(struct Books *book);
 struct Books  struct_book(char title[], char author[], char subject[], int book_id);
 
 int main(){
@@ -28,9 +28,9 @@ int main(){
     // todo 使用结构体类型函数为 赋值
     book1 = struct_book("python web", "mark", "7天入门", 1026);
 
-    // todo 打印结构体（参数为结构体变量）
-    print_book(book1);
-    print_book(book2);
+    // todo 打印结构体（参数为结构体指针地址）
+    print_book(&book1);
+    print_book(&book2);
     return 0;
 }
 
@@ -46,7 +46,6 @@ struct Books struct_book(char title[], char author[], char subject[], int book_i
     return book2;
 }
 
-void print_book(struct Books book){
-    printf("book1 title:%s, author:%s, subject:%s, book_id:%d \n", book.title, book.author, book.subject, book.book_id);
-
+void print_book(struct Books *book){
+    printf("book1 title:%s ,\n author:%s,\n subject:%s,\n book_id:%d \n", book->title, book->author, book->subject, book->book_id);
 }
