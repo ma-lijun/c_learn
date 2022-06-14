@@ -24,5 +24,15 @@ int main(){
     printf("\n you entered:");
     putchar(c);
     printf("\n");
+
+    // scanf()  printf()
+       char str[100];
+   int i;
+
+   printf( "Enter a value :");
+   scanf("%s %d", str, &i);
+
+   printf( "\nYou entered: %s %d ", str, i);
+   printf("\n");
     return 0;
 }
